@@ -1,0 +1,66 @@
+
+<!-- Class binding -->
+<div>
+    <!-- normal class -->
+    <h1 class="success">Bharathi</h1>
+    <!-- class binding -->
+    <h1 [class]="newstyle">Sundara</h1>
+    <!-- class binding only working -->
+    <h1 class="success" [class]="newonebind">my name is bharathi</h1>
+    <!-- Conditional binding -->
+    <h1 [ngClass]="thirdError">Conditional binding method</h1>
+</div>
+
+<!-- Style binding -->
+<div>
+    <!-- inline style binding -->
+  <h1 [style.color]="'darkblue'">inline style binding</h1>
+  <!-- Inline style binding Condition -->
+  <h1 [style.color]="styleError? 'blue':'red'">Conditional style binding</h1>
+  <!-- style binding -->
+  <h1 [style.color]="newcolor">new bharathi color</h1>
+  <!-- ngStyle binding -->
+  <h1 [ngStyle]="newonecolor">new one color bharathi</h1>
+</div>
+
+<!-- Event binding -->
+<!-- $event => special variable of angular -->
+<div>
+    <!-- First method -->
+    <button (click)="onClick()">Start</button>
+    <h1 [ngStyle]="newonecolor">{{greetings}}</h1>
+    <!-- Second method -->
+    <button (click)="greetings='welcome bharathi'">new start</button>
+    <h1>{{greetings}}</h1>
+</div>
+
+<!-- Template Reference variable -->
+<div>
+    <!-- Login user -->
+    <input #myInput type="text">
+    <button (click)="loginmessage(myInput.value)">Login</button>
+    <h1>{{typingvalue}}</h1>
+</div>
+
+<!-- two way binding -->
+<div>
+    <input [(ngModel)]="name" type="text">
+    <h1 [ngStyle]="newonecolor">{{name}}</h1>
+</div>
+
+<!-- ngIf Directives -->
+<div>
+    <!-- ngIf Method one -->
+    <h1 *ngIf="false">bharathi</h1>
+    <!-- ngIf method two -->
+    <div *ngIf="displayname; then thenBlock; else elseBlock;">
+        
+    </div>
+    <ng-template #thenBlock>
+        <h1>this is bharathi</h1>
+    </ng-template>
+    <ng-template #elseBlock>
+        <h1>this is Joshua</h1>
+    </ng-template>
+   
+</div>

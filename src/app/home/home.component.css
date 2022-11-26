@@ -1,0 +1,15 @@
+
+.success{
+    color: green;
+}
+
+.danger{
+    color: red;
+}
+
+.newtext{
+    color: darkmagenta;
+    font-size: large;
+    font-weight: 500;
+    font-style: italic;
+}
